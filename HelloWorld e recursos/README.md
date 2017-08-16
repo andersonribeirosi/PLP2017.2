@@ -73,6 +73,8 @@ Com loop:
 (hello-world)
 
 _____________________________________________________________________
+Hello World em C
+
 #include "stdio.h" //O include nos permite utilizar o printf e o scanf por exemplo, e o stdio.h é uma biblioteca que agrupa um conjunto de funções básicas.
 
 int main() {

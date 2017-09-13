@@ -47,7 +47,7 @@ public class Terminal {
 		}
 
 		try {
-			cc.setValorLimite(10000);
+			cc.setValorLimite(1000);
 		} catch (ValorLimiteExcedidoException e) {
 			System.err.println(e.getMessage());
 		} catch (Exception e) {

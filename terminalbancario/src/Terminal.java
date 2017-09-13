@@ -32,27 +32,27 @@ public class Terminal {
 		try {
 			cc.depositar(500);
 		} catch (ValorDepositoInvalidoException e) {
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 		} finally {
 		}
 
 		try {
-			cc.sacar(500);
+			cc.sacar(10000);
 		} catch (SaldoInsuficienteException e) {
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 		} finally {
 		}
 	
 		try {
 			cc.setValorLimite(0);
 		} catch (ValorLimiteExcedidoException e) {
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 		} finally {
 		}
 		

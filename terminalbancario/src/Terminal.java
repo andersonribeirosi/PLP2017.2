@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class Terminal {
 
-	ContaCorrente cc = new ContaCorrente(0416, 33995, 1000, 1000, 2000, "Anderson");
+	ContaCorrente cc = new ContaCorrente(0416, 33995, 1000, 1000, 2000, "Anderson Ribeiro");
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,7 +28,6 @@ public class Terminal {
 	@Test
 	public void test() {
 
-			
 		try {
 			cc.depositar(500);
 		} catch (ValorDepositoInvalidoException e) {
@@ -39,23 +38,23 @@ public class Terminal {
 		}
 
 		try {
-			cc.sacar(10000);
+			cc.sacar(1000);
 		} catch (SaldoInsuficienteException e) {
 			System.err.println(e.getMessage());
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		} finally {
 		}
-	
+
 		try {
-			cc.setValorLimite(0);
+			cc.setValorLimite(10000);
 		} catch (ValorLimiteExcedidoException e) {
 			System.err.println(e.getMessage());
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		} finally {
 		}
-		
+
 		System.out.println("Titular da Conta: " + cc.getTitular());
 		System.out.println("Agencia: " + cc.getAgencia());
 		System.out.println("Conta: " + cc.getConta());
